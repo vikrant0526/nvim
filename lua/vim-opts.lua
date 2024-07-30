@@ -18,6 +18,4 @@ vim.opt.hlsearch = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
 vim.opt.expandtab = true
-
--- Can't find these options
--- vim.cmd("set so:999")
+vim.opt.guicursor = ""
