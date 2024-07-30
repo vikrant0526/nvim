@@ -5,10 +5,11 @@ return {
 		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		{ "j-hui/fidget.nvim",       opts = {} },
-		{ "folke/neodev.nvim",       opts = {} },
+		{ "j-hui/fidget.nvim", opts = {} },
+		{ "folke/neodev.nvim", opts = {} },
 		"tpope/vim-sleuth",
 		"luckasRanarison/tailwind-tools.nvim",
+		"charlespascoe/vim-go-syntax",
 	},
 	config = function()
 		vim.api.nvim_create_autocmd("LspAttach", {

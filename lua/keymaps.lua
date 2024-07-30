@@ -8,8 +8,8 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagn
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Yank and Paste from System Keyboard
-vim.keymap.set("n", "<leader>y", '"+y')
-vim.keymap.set("n", "<leader>p", '"+p')
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "[Y]ank to system clipboard" })
+vim.keymap.set("n", "<leader>p", '"+p', { desc = "[P]aste from system clipboard" })
 
 -- Move vertically and center cursor to screen
 vim.keymap.set("n", "j", "jzz")
@@ -19,10 +19,6 @@ vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-vim.keymap.set("i", '"', '""<left>')
-vim.keymap.set("i", "'", "''<left>")
-vim.keymap.set("i", "(", "()<left>")
-vim.keymap.set("i", "[", "[]<left>")
-vim.keymap.set("i", "{", "{}<left>")
-vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O")
-vim.keymap.set("i", "{;<CR>", "{<CR>};<ESC>O")
+vim.keymap.set("n", "<leader>gi", vim.lsp.buf.hover, { desc = "[G]et [I]nfo about element under cursor" })
+
+vim.keymap.set("n", "<leader>ut", "vim.cmd.UndotreeToggle", { desc = "[U]ndo [T]ree" })
