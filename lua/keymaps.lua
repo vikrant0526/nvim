@@ -21,4 +21,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 vim.keymap.set("n", "<leader>gi", vim.lsp.buf.hover, { desc = "[G]et [I]nfo about element under cursor" })
 
-vim.keymap.set("n", "<leader>ut", "vim.cmd.UndotreeToggle", { desc = "[U]ndo [T]ree" })
+vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "[U]ndo [T]ree" })
+
+-- Buffer movements
+vim.keymap.set("n", "<leader>bn", vim.cmd.bnext, { desc = "[B]uffer [N]ext" })
+vim.keymap.set("n", "<leader>bp", vim.cmd.bNext, { desc = "[B]uffer [P]revious" })
