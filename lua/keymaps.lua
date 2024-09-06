@@ -19,10 +19,17 @@ vim.keymap.set("n", "k", "kzz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-vim.keymap.set("n", "<leader>gi", vim.lsp.buf.hover, { desc = "[G]et [I]nfo about element under cursor" })
-
-vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle, { desc = "[U]ndo [T]ree" })
-
 -- Buffer movements
 vim.keymap.set("n", "<leader>bn", vim.cmd.bnext, { desc = "[B]uffer [N]ext" })
 vim.keymap.set("n", "<leader>bp", vim.cmd.bNext, { desc = "[B]uffer [P]revious" })
+
+-- LSP
+vim.keymap.set("n", "<leader>gi", vim.lsp.buf.hover, { desc = "[G]et [I]nfo about element under cursor" })
+
+-- Others
+local function OpenUndotree()
+	vim.cmd.UndotreeToggle()
+	vim.cmd.UndotreeFocus()
+end
+
+vim.keymap.set("n", "<leader>ut", OpenUndotree, { desc = "[U]ndo [T]ree" })
