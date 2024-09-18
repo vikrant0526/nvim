@@ -41,6 +41,9 @@ return {
 			}
 		end,
 	},
+	-- To center text
+	{ "shortcuts/no-neck-pain.nvim", version = "*" },
+	-- Indentation guides
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
